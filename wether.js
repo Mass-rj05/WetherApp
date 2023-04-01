@@ -17,4 +17,10 @@
   //Po otrzymaniu 'zwrotki' z API wyciagnij dane z obkietu i przekaże je do pół HTMl które stworzyłeś (Miasto, teperatura, temperatury godzinowe)
 
 //Good luck ;)
-console.warn("JS initialized!");
+console.info("JS initialized");
+const apiKey = "1b2d3f5c36244b56bde173851232903";
+fetch(
+  `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=Poznan&days=1&aqi=no&alerts=no`
+)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
