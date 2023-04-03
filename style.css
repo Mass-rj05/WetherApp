@@ -24,6 +24,7 @@ section{
 .title h1{
     font-size: 4rem;
     letter-spacing: 4px;
+    color: rgb(72, 97, 143);
     
 }
 
@@ -37,13 +38,30 @@ section{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+ ;
 }
 
+.degrees-box{
+    display: flex;
+    margin-left: 90px;
+   
+}
 
 .degrees{
     font-size: 4.4rem;
     font-weight: 300;
     letter-spacing: 3px;
+}
+.icon{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 65px;
+
 }
 
 .city{
@@ -54,7 +72,7 @@ section{
 }
 
 .temp-container{
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +80,7 @@ section{
 }
 
 .temp{
-    background-color: rgb(231, 227, 227);
+    background-color: rgb(243, 240, 240);
     padding: 7px;
     width: 70px;
     height: 70px;
@@ -70,16 +88,20 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid rgb(212, 212, 214);
+    border: 1px solid rgb(227, 227, 235);
+ 
 }
 .hour{
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 700;
 }
-.deg{
-    font-size: 1.2rem;
+.temp h4{
     font-weight: 300;
+    text-align: center;
 }
+
+
+
 .bars{
     margin-top: 30px;
     display: flex;
@@ -119,6 +141,19 @@ input:focus{
     letter-spacing: 1px;
     cursor: pointer;
     box-shadow: 0px 0px 12px -3px rgb(132, 141, 165);
+    transition: 0.1s;
+
+}
+#send:hover{
+    color: rgb(46, 167, 62);
 }
 
+
+
+
+
+
+@media screen and (max-width: 600px) {
+
+}
 
