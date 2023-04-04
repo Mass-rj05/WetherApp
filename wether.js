@@ -24,10 +24,14 @@ const city = document.querySelector(".city");
 const hour = document.querySelectorAll(".hour");
 const searchInput = document.querySelector('.search');
 const button = document.querySelector('#send');
+//Lepiej dać klase np. deg i zrobić coś typu:
+// document.getElementsByClassName("temp")[0].children[1]  popatrz sobie po koleji co to zwraca
+//Wtedy zamiast hardkodować do 4 zmiennych zrób pętle lub funkcje która przeleci po wszystkich childach i sobie je "zmapuje"
 const deg0 = document.querySelector(".deg0")
 const deg6 = document.querySelector(".deg6")
 const deg12 = document.querySelector(".deg12")
 const deg18 = document.querySelector(".deg18")
+// 
 const temp = document.querySelectorAll(".temp")
 const iconbox = document.querySelector(".icon")
 
@@ -36,8 +40,9 @@ const iconbox = document.querySelector(".icon")
 
 const apiKey = "1b2d3f5c36244b56bde173851232903";
 
+//Dlaczego wszystko jest zawrapowane w obiekcie ?
 let weather = {
-  fetchWeather: function(city) {
+  fetchWeather: function(city) { //Ja bym tutaj uzył funkcjo strzałkowej zamiast klasycznej
     fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=` + city +`&days=1&aqi=no&alerts=no`
     ).then((response) => response.json())
     .then((data) => this.displayWeather(data))
@@ -47,6 +52,10 @@ let weather = {
 const temperature  = data.current.temp_c
 const name = data.location.name
 const icon = data.current.condition.icon;
+//Można by to zrobić w spossób bardziej generyczny/uniwersalny (chodzi o te temphour0 itd. )np.
+//new Date().getHours() - to zwróci aktualna godzine i wtedy w jednej funkcji czy pętli pobierz sobie pogode dla:
+// Date().getHours()-2,  Date().getHours()-1,  Date().getHours(),  Date().getHours()+1,  Date().getHours()+2
+//wyniki wrzucaj to obkietu np. tempHours ={} zamiast hardkodować do zmiennych
 const temphour0 = data.forecast.forecastday[0].hour[0].temp_c;
 const temphour6 = data.forecast.forecastday[0].hour[5].temp_c;
 const temphour12 = data.forecast.forecastday[0].hour[11].temp_c;
