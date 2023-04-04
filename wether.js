@@ -18,6 +18,7 @@
 
 //Good luck ;)
 
+
 const degrees = document.querySelector(".degrees");
 const city = document.querySelector(".city");
 const hour = document.querySelectorAll(".hour");
