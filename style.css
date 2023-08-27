@@ -25,6 +25,7 @@ section{
     font-size: 4rem;
     letter-spacing: 4px;
     color: rgb(72, 97, 143);
+    color: rgb(72, 97, 143);
     
 }
 
@@ -44,6 +45,7 @@ section{
 .degrees-box{
     display: flex;
     margin-left: 90px;
+    justify-content: center;
    
 }
 
@@ -61,6 +63,7 @@ section{
     justify-content: center;
     background-repeat: no-repeat;
     background-size: 65px;
+    margin-right: 53px;
 
 }
 
