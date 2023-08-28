@@ -17,7 +17,7 @@ let citychange;
 citychange = "poznan"
 const apiKey = "24a114ac009b4699bb0170304232708";
 function weatherapi(){
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=` + citychange+`&days=1&aqi=no&alerts=no`)
+  fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=` + citychange +`&days=1&aqi=no&alerts=no`)
   .then((response) => {
     return response.json();
   })
